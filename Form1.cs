@@ -230,6 +230,8 @@ namespace WinFormsApp
                 /* Update the company label color using the dialog state */
                 companyLabelObj.Brush = new SolidBrush(dialog.SelectedColor);
                 /* Update the company text */
+                if (dialog.NewText.Length > 0)
+                    companyLabelObj.Text = dialog.NewText;
 
                 Invalidate();
             }

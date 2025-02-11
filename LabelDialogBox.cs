@@ -98,6 +98,10 @@ namespace WinFormsApp
             else if (smallSizeRadioButton.Checked)
                 SelectedSize = 12;
 
+            // Text
+            NewText = newTextBox.Text;
+
+            // Set states to OK
             DialogResult = DialogResult.OK;
         }
 

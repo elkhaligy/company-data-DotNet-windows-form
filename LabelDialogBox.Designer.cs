@@ -30,24 +30,24 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            label3 = new Label();
             MsSerifRadioButton = new RadioButton();
             arialRadioButton = new RadioButton();
             timesNewRomanRadioButton = new RadioButton();
             tabPage2 = new TabPage();
-            button3 = new Button();
+            pickColorButton = new Button();
             tabPage3 = new TabPage();
             largeSizeRadioButton = new RadioButton();
             mediumSizeRadioButton = new RadioButton();
             smallSizeRadioButton = new RadioButton();
             tabPage4 = new TabPage();
+            label2 = new Label();
             label1 = new Label();
             newTextBox = new TextBox();
             currTextBox = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            okButton = new Button();
+            cancelButton = new Button();
             colorDialog1 = new ColorDialog();
-            label2 = new Label();
-            label3 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -80,6 +80,16 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Font";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 17F);
+            label3.Location = new Point(256, 20);
+            label3.Name = "label3";
+            label3.Size = new Size(150, 40);
+            label3.TabIndex = 3;
+            label3.Text = "Pick a font";
             // 
             // MsSerifRadioButton
             // 
@@ -116,7 +126,7 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(button3);
+            tabPage2.Controls.Add(pickColorButton);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -125,15 +135,15 @@
             tabPage2.Text = "Color";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // pickColorButton
             // 
-            button3.Location = new Point(255, 86);
-            button3.Name = "button3";
-            button3.Size = new Size(126, 91);
-            button3.TabIndex = 0;
-            button3.Text = "Pick a Color";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            pickColorButton.Location = new Point(255, 86);
+            pickColorButton.Name = "pickColorButton";
+            pickColorButton.Size = new Size(126, 91);
+            pickColorButton.TabIndex = 0;
+            pickColorButton.Text = "Pick a Color";
+            pickColorButton.UseVisualStyleBackColor = true;
+            pickColorButton.Click += button3_Click;
             // 
             // tabPage3
             // 
@@ -195,6 +205,15 @@
             tabPage4.Text = "Text";
             tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(222, 121);
+            label2.Name = "label2";
+            label2.Size = new Size(117, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Enter a new Text";
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -219,52 +238,33 @@
             currTextBox.Size = new Size(196, 27);
             currTextBox.TabIndex = 0;
             // 
-            // button1
+            // okButton
             // 
-            button1.Location = new Point(591, 390);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "OK";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            okButton.Location = new Point(591, 390);
+            okButton.Name = "okButton";
+            okButton.Size = new Size(94, 29);
+            okButton.TabIndex = 1;
+            okButton.Text = "OK";
+            okButton.UseVisualStyleBackColor = true;
+            okButton.Click += button1_Click;
             // 
-            // button2
+            // cancelButton
             // 
-            button2.Location = new Point(694, 390);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(222, 121);
-            label2.Name = "label2";
-            label2.Size = new Size(117, 20);
-            label2.TabIndex = 3;
-            label2.Text = "Enter a new Text";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 17F);
-            label3.Location = new Point(256, 20);
-            label3.Name = "label3";
-            label3.Size = new Size(150, 40);
-            label3.TabIndex = 3;
-            label3.Text = "Pick a font";
+            cancelButton.Location = new Point(694, 390);
+            cancelButton.Name = "cancelButton";
+            cancelButton.Size = new Size(94, 29);
+            cancelButton.TabIndex = 2;
+            cancelButton.Text = "Cancel";
+            cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += button2_Click;
             // 
             // LabelDialogBox
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(cancelButton);
+            Controls.Add(okButton);
             Controls.Add(tabControl1);
             Name = "LabelDialogBox";
             Text = "Company Label Customization";
@@ -289,9 +289,9 @@
         private RadioButton timesNewRomanRadioButton;
         private TabPage tabPage3;
         private TabPage tabPage4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button okButton;
+        private Button cancelButton;
+        private Button pickColorButton;
         private ColorDialog colorDialog1;
         private RadioButton largeSizeRadioButton;
         private RadioButton mediumSizeRadioButton;
